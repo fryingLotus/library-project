@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Modal</title>
+  <link href="style.css" rel="stylesheet">
+  <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="headerPage">
+        <h1>This is a simple library</h1>
+    </div>
+
+    <div class="book-container">
+        <div class="bookHeader">
+            <h3>Title</h3>
+            <h3>Author</h3>
+            <h3>Page</h3>
+            <h3>Status</h3>
+          </div>
+          <div class="card-2">
+            <p>Harry Potter</p>
+              <p>lmao</p>
+              <p>143</p>
+              <p>Status: <span>Read</span></p>
+              <button data-deleteButton type="button" value="&times;">&times;</button>
+            </div>
+        <div class="bookBox" id="bookItem">
+          
+    
+         
+    
+         
+            
+         
+        </div>
+    </div>
+
+    <!-- modal stuff -->
+  <button data-modal-target="#modal">Add a book</button>
+  <div class="modal" id="modal">
+    <div class="modal-header">
+      <div class="title">Please input the form</div>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body">
+        <form class="formStyle" action="" method="post">
+        <input type="text" id="title" placeholder="What's the title of the book">
+        <input type="text" id="author" placeholder="Who's the author of the book">
+        <input type="number" id="page" placeholder="How many page are theres">
+        <label for="status">Have you read it?</label>
+        <div class="button-group">
+            <button  data-button type="button" value="yes">Yes</button>
+            <button  data-button type="button" value="no">No</button>
+        </div>
+       
+        <input type="submit" id="submit-button" value="Add book">
+    </form>
+    </div>
+  </div>
+  <div id="overlay"></div>
+      <!-- modal stuff end -->
+</body>
+</html>
