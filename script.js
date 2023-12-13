@@ -34,20 +34,25 @@ class Library {
     const getPage = document.querySelector("#page").value;
   
     let readStatus = "";
-  
+    let buttonClicked = false;
     dataButton.forEach((btn) => {
           if (btn.classList.contains('active')) {
+            buttonClicked = true
             if (btn.value == "yes") {
               readStatus = "Read";
             } else {
               readStatus = "Not Read";
+              
             }
             
-          }
+          } 
         })
+        if (!buttonClicked) {
+          alert("Please select a value");
+          return; 
+      }
   
-  
-    let newBook = new Book(getTitle, getAuthor, getPage, readStatus);
+        let newBook = new Book(getTitle, getAuthor, getPage, readStatus);
     
 
     this.books.push(newBook);

@@ -41,9 +41,21 @@
     </div>
     <div class="modal-body">
         <form class="formStyle" action="" method="post">
-        <input type="text" id="title" placeholder="What's the title of the book">
-        <input type="text" id="author" placeholder="Who's the author of the book">
-        <input type="number" id="page" placeholder="How many page are theres">
+        <label for="title">
+          <input type="text" id="title" name="myTitle" placeholder="What's the title of the book" required minlength="1">
+          <span class="error" aria-live="polite"></span>
+        </label>
+        
+        <label for="author">
+          <input type="text" id="author" name="myAuthor" placeholder="Who's the author of the book" required minlength="1">
+          <span class="error" aria-live="polite"></span>
+        </label>
+       
+        <label for="page">
+          <input type="number" id="page" placeholder="How many page are theres" required min="5" max="1000">
+          <span class="error" aria-live="polite"></span>
+        </label>
+       
         <label for="status">Have you read it?</label>
         <div class="button-group">
             <button  data-button type="button" value="yes">Yes</button>

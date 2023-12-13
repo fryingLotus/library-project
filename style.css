@@ -102,6 +102,7 @@ h1 {
 input[type="number"],
 input[type="text"] {
     margin: 10px 0;
+    width: 100%;
 }
 .groupBtn {
     display: flex;
